@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.bcs.entity.MasterIncident;
 
-@Repository
+//@Repository
 public interface MasterIncidentRepository extends JpaRepository<MasterIncident, Integer> {
 
 }

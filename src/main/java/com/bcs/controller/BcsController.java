@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.bcs.entity.MasterIncident;
 import com.bcs.entity.User;
 import com.bcs.service.BcsService;
 
@@ -24,4 +25,10 @@ public class BcsController {
 		return bcsService.getAllUser();
 	}
 
+	
+	@GetMapping(path="/getIncidentType")
+	public List<MasterIncident> getIncidentType() {
+		return bcsService.getIncidentType();
+	}
+	
 }
