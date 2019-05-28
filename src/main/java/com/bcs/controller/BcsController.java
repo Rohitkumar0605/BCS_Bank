@@ -8,20 +8,24 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bcs.entity.User;
+import com.bcs.entity.UserTicket;
 import com.bcs.service.BcsService;
-
 
 @RestController
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class BcsController {
-	
-	
+
 	@Autowired
 	BcsService bcsService;
-	
-	@GetMapping(path="/getAllUser")
+
+	@GetMapping(path = "/getAllUser")
 	public List<User> getAllUsers() {
 		return bcsService.getAllUser();
+	}
+
+	@GetMapping("/getAllIncidentDetails")
+	public List<UserTicket> getAllIncidentDetails() {
+		return bcsService.getAllIncident();
 	}
 
 }
