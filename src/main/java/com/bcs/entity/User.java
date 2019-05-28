@@ -16,7 +16,7 @@ public class User {
 	private Long userId;
 	
 	@Column
-	private Long userName;
+	private String userName;
 	
 	public User() {
 		
@@ -30,11 +30,11 @@ public class User {
 		this.userId = userId;
 	}
 
-	public Long getUserName() {
+	public String getUserName() {
 		return userName;
 	}
 
-	public void setUserName(Long userName) {
+	public void setUserName(String userName) {
 		this.userName = userName;
 	}
 	
